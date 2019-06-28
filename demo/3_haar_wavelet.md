@@ -38,6 +38,11 @@
 `cD`表示对角线方向的细节：水平低通+垂直低通
 
 
+### 理论推导
+
+> 待续
+
+
 ### Reference
 
 * [图像Haar小波变换](https://blog.csdn.net/HanFeiKei/article/details/83584963)

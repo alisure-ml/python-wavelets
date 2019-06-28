@@ -34,7 +34,3 @@ wave_coif = pywt.wavelist(family="coif")
 print(wave_coif)
 wave_continuous = pywt.wavelist(kind="continuous")
 print(wave_continuous)
-
-
-
-

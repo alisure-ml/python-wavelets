@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 data = [1, 1, 1, 1, 2, 2, 3, 3]
 
 # Haar小波
-haar = pywt.Wavelet(name="haar", filter_bank=((1, 1), (-1, 1), (1, 1), (1, -1)))
+# haar = pywt.Wavelet(name="haar")  # 规范化小波
+haar = pywt.Wavelet(name="haar", filter_bank=((1, 1), (-1, 1), (1, 1), (1, -1)))  # 未规范化小波
 
 # （1级）1D离散小波变换
 cA1, cD1 = pywt.dwt(data, haar)
@@ -69,6 +70,7 @@ cA, (cH, cV, cD) = pywt.dwt2(data_camera, haar)
 
 # 可视化
 Image.fromarray(np.asarray(data_camera, dtype=np.uint8)).save("./3_haar_wavelet_camera.png")
+# Image.fromarray(np.asarray(cA // (4 * 0.707), dtype=np.uint8)).save("./3_haar_wavelet_cA.png")
 Image.fromarray(np.asarray(cA // 4, dtype=np.uint8)).save("./3_haar_wavelet_cA.png")
 fig = plt.figure()
 fig.suptitle("Haar wavelet", fontsize=14)
