@@ -28,7 +28,7 @@ print()
 
 
 # 2D multilevel
-coeffs = pywt.wavedec2(np.ones((4,4)), 'db1')  # decomposition
+coeffs = pywt.wavedec2(np.ones((4, 4)), 'db1')  # decomposition
 print(len(coeffs)-1)
 rec = pywt.waverec2(coeffs, 'db1')  # reconstruction
 print(rec)
